@@ -1,4 +1,5 @@
-import hero from "@/assets/hero-campus.jpg";
+import hero from "@/assets/bg2.png";
+// import hero from "@/assets/hero-campus.jpg";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
