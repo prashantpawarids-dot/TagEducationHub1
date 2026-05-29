@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logoremovebgpreview.png";
 
+// import logo from "@/assets/logo2.png";
+
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
@@ -36,14 +38,22 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
       </div>
 
       <div className="container-tag flex items-center justify-between py-3">
-        <Link to="/" className="flex items-center gap-3">
-          <img
+        <Link to="/" className="flex items-center gap-3 bg-transparent">
+          {/* <img
             src={logo}
             alt="TAG Education Hub"
             className={`h-20 w-auto object-contain md:h-24 ${
               transparent ? "brightness-0 invert" : ""
             }`}
-          />
+          /> */}
+
+          <img
+  src={logo}
+  alt="TAG Education Hub"
+ className={`h-20 w-auto object-contain md:h-24 ${
+    transparent ? "drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" : ""
+  }`}
+/>
         </Link>
 
         <button
