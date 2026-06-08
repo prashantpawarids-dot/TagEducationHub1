@@ -1,9 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logoremovebgpreview.png";
+// import logo from "@/assets/logoremovebgpreview.png";
 
-// import logo from "@/assets/logo2.png";
+import logo from "@/assets/logo-removebg-preview (1).png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -24,9 +24,7 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
     >
       <div
         className={`w-full ${
-          transparent
-            ? "bg-ink/70 backdrop-blur-sm text-white"
-            : "bg-ink text-white"
+          transparent ? "bg-ink/70 backdrop-blur-sm text-white" : "bg-ink text-white"
         }`}
       >
         <div className="container-tag flex flex-col gap-1 py-2 text-xs sm:flex-row sm:items-center sm:justify-between sm:text-sm">
@@ -48,21 +46,17 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
           /> */}
 
           <img
-  src={logo}
-  alt="TAG Education Hub"
- className={`h-20 w-auto object-contain md:h-24 ${
-    transparent ? "drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" : ""
-  }`}
-/>
+            src={logo}
+            alt="TAG Education Hub"
+        className="h-14 w-auto object-contain rounded-lg"
+          />
         </Link>
 
         <button
           aria-label="Open menu"
           onClick={() => setOpen(true)}
           className={`btn-interactive inline-flex items-center gap-2 px-4 py-2 text-sm tracking-wide ${
-            transparent
-              ? "text-white/95 hover:text-white"
-              : "text-foreground/80 hover:text-primary"
+            transparent ? "text-white/95 hover:text-white" : "text-foreground/80 hover:text-primary"
           }`}
         >
           <Menu className="h-5 w-5" />
@@ -102,12 +96,12 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
           </div>
 
           <div className="container-tag relative z-10 flex shrink-0 items-center justify-between py-5">
-            <Link
-              to="/"
-              onClick={() => setOpen(false)}
-              className="flex items-center gap-3"
-            >
-              <img src={logo} alt="TAG" className="h-14 w-auto object-contain brightness-0 invert" />
+            <Link to="/" onClick={() => setOpen(false)} className="flex items-center gap-3">
+              <img
+                src={logo}
+                alt="TAG"
+                className="h-14 w-auto object-contain brightness-0 invert"
+              />
             </Link>
             <button
               onClick={() => setOpen(false)}
