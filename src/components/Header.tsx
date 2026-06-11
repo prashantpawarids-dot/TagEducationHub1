@@ -96,12 +96,10 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
           </div>
 
           <div className="container-tag relative z-10 flex shrink-0 items-center justify-between py-5">
-            <Link to="/" onClick={() => setOpen(false)} className="flex items-center gap-3">
-              <img
-                src={logo}
-                alt="TAG"
-                className="h-14 w-auto object-contain brightness-0 invert"
-              />
+           <Link to="/" onClick={() => setOpen(false)} className="flex items-center gap-3">
+              <span className="font-serif text-xl tracking-widest text-white">
+                TAG <span className="text-white/60">EDUCATION</span>
+              </span>
             </Link>
             <button
               onClick={() => setOpen(false)}
